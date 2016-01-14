@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Margin Arrows</title>
+
+
+<style type="text/css">
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial,sans-serif;
+}
+
+
+.paginator {
+    border: 1px solid #dadada;
+    position: fixed;
+    z-index: 1000;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 20px;
+    max-height: 82px;
+    top: 30%;
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+    max-width: 72px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #428bca;
+}
+.paginator:hover {
+    color: #428bca;
+    text-decoration: none;
+    max-width: 500px;
+    transition: max-width 0.2s ease-in;
+    box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.15);
+}
+.paginator:hover img{
+    opacity: .8;
+}
+.paginator.prev {
+    left: 0;
+}
+.paginator.next {
+    right: 0;
+}
+.paginator.prev img {
+    float: left;
+}
+.paginator.next img {
+    float: right;
+}
+
+.paginator img{
+    opacity: .4;
+    transition: all 0.2s ease-in;
+}
+.paginator .title {
+    overflow: hidden;
+    max-height: 38px;
+    display: block;
+    transition: max-width 0.2s ease-out;
+}
+.paginator .title b {
+    color: #666;
+}
+.paginator.prev .title {
+    margin-left: 42px;
+}
+.paginator.next .title {
+    margin-right: 42px;
+}
+
+
+
+
+
+.awesome {
+    top: 55%;
+}
+.awesome .fa {
+    color: #000;
+    opacity: .4;
+    transition: all 0.2s ease-in;
+    font-size: 62px;
+    margin-top: -13px;
+}
+.awesome .over {
+    color: #fff;
+    opacity: 1;
+    margin-top: -13px;
+    position: absolute; 
+}
+.paginator:hover .fa:first-child{
+    opacity: .8;
+}
+.paginator.prev .fa {
+    float: left;
+}
+.paginator.next .fa {
+    float: right;
+}
+
+.paginator.prev .over {
+    left: 22px;
+}
+
+.paginator.next .over {
+    right: 22px;
+}
+
+</style>
+
+<!-- OPTIONAL -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
+</head>
+
+<body>
+
+<p>The top version uses images, the bottom version uses FontAwesome.</p>
+
+<a class="paginator prev" href="FD_SERP-color_darkBlue.html">
+    <img src="prev.png">
+    <span class="title"><b>Previous:</b><br>We have Powerball winners!</span>
+</a>
+<a class="paginator next" href="FD_SERP-color_darkBlue.html">
+    <img src="next.png">
+    <span class="title"><b>Next:</b><br>Nope, it wasnt you. Sorry.</span>
+</a>
+
+
+<a class="paginator prev awesome" href="FD_SERP-color_darkBlue.html">
+    <i class="fa fa-angle-left"></i>
+    <i class="fa fa-angle-left over"></i>
+    <span class="title"><b>Previous:</b><br>We have Powerball winners!</span>
+</a>
+<a class="paginator next awesome" href="FD_SERP-color_darkBlue.html">
+    <i class="fa fa-angle-right"></i>
+    <i class="fa fa-angle-right over"></i>
+    <span class="title"><b>Next:</b><br>Nope, it wasnt you. Sorry.</span>
+</a>
+
+</body>
+</html>
